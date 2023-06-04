@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+   
+    <style>
+   
+      </style>
+      <script>
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+var a=0;
+var b=0;
+function showdate(){
+  a=a+1;
+   var d = new Date();
+  let month = months[d.getMonth()];
+  let day = d.getDate();
+  let year= d.getFullYear();
+  a%2!=0?document.getElementById("date").innerHTML = day+"/"+month+"/"+year:document.getElementById("date").innerHTML = "";
+}
+
+function showtime() {
+  b=b+1;
+            var date = new Date();
+  b%2!=0?document.getElementById('Time').innerHTML = date:document.getElementById('Time').innerHTML = "";
+        }
+
+      </script>
+</head>
+<body>
+    <button onclick="showdate()">show date</button>
+    <p id="date"></p>
+    <button onclick="showtime()">show time</button>
+    <p id="Time"></p>
+
+</body>
+</html>
